@@ -1,0 +1,10 @@
+.my-container {
+  --scale: 2
+}
+
+.my-div {
+  display: inline-block;
+  width: calc(50px * var(--scale));
+  height: calc(50px * var(--scale));
+  background: blue;
+}
