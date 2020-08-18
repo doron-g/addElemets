@@ -15,6 +15,10 @@ function addDiv(){
     counter= ++counter
     var elemText = document.createTextNode("i am a new div");
     elem.appendChild(elemText);
+    elem.classList.add("theNewDiv");
     elem.id = "new div" + (counter)
     document.body.appendChild(elem);
 }
+
+/*
+elem.classList.add("newClass");*/
