@@ -12,8 +12,9 @@ div.image {
    float: left
 }
 button.image {
-   content:url("img/man.jpg");
+   background-image:url("img/man.jpg");
    width: calc(10px * var(--scale));
    height: calc(10px * var(--scale));
-   float: left
+   float: left;
+   background-size:100%;
 }
