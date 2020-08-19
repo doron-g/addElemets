@@ -1,6 +1,7 @@
 }
 body {
   --scale: 1
+
 }
 
 
@@ -9,12 +10,14 @@ div.image {
    content:url("img/man.jpg");
    width: calc(10px * var(--scale));
    height: calc(10px * var(--scale));
-   float: left
+ /*  float: left*/
 }
 button.image {
-   background-image:url("img/man.jpg");
-   width: calc(10px * var(--scale));
-   height: calc(10px * var(--scale));
-   float: left;
+   /*background-image:url("img/man.jpg");*/
+   width: 100%;
+   /*width: calc(10px * var(--scale));*/
+   height: calc(50px * var(--scale));
+   /*float: left;*/
    background-size:100%;
+   display: block;
 }
