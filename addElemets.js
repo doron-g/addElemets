@@ -1,24 +1,19 @@
 
-function changeScale() {
-  const scale = 8;
-  const elm = document.getElementById('dynamic-scale');
-  elm.setAttribute('style', `--scale: ${scale}`)
+function addDiv(scale=10){
+    const elm = document.createElement("div");
+    elm.classList.add("image");
+    elm.setAttribute('style', `--scale: ${scale}`);
+    document.body.appendChild(elm);
 }
 
-
-
-
-
-var counter = 0;
-function addDiv(){
-    const elem = document.createElement("div");
-    counter= ++counter
-    var elemText = document.createTextNode("i am a new div");
-    elem.appendChild(elemText);
-    elem.classList.add("theNewDiv");
-    elem.id = "new div" + (counter)
-    document.body.appendChild(elem);
+async function getCoronaDeaths() {
+   const result = await fetch('coronaDeaths.json')
+   const mydata = await result.json()
+   for (const day of mydata) {
+       if (day.deaths > 0) {
+            addDiv(day.deaths)
+       }
+   }
 }
+getCoronaDeaths()
 
-/*
-elem.classList.add("newClass");*/

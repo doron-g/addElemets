@@ -1,5 +1,8 @@
 .my-container {
-  --scale: 2
+  --scale: 1
+}
+body {
+  --scale: 1
 }
 
 .my-div {
@@ -7,4 +10,10 @@
   width: calc(50px * var(--scale));
   height: calc(50px * var(--scale));
   background: blue;
+}
+
+div.image {
+   content:url("img/man.jpg");
+   width: calc(10px * var(--scale));
+   height: calc(10px * var(--scale));
 }
