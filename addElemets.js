@@ -10,8 +10,9 @@ function addDiv(scale=10, title, accumulative){
     elm.setAttribute('data-toggle','popover');
     elm.setAttribute('data-trigger', 'focus');
     elm.setAttribute('title', title);
-    elm.setAttribute('data-content','מתים מקורונה היום: ' + scale + " עד היום נפטרו: " + accumulative);
+    elm.setAttribute('data-content','נפטרו מקורונה היום: '+"<b>" + scale + "</b>" + "<br />" + " עד היום נפטרו: " +"<b>" + accumulative +"</b>" );
     elm.setAttribute('data-placement','down');
+    elm.setAttribute('data-html','true');
     elm.setAttribute('type','button');
     elm.setAttribute('id',++counter);
     document.body.appendChild(elm);
